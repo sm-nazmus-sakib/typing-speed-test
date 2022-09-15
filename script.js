@@ -26,6 +26,10 @@ const typeController = (e) => {
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
+    window.onkeydown = function (e) 
+    {
+      return !(e.keyCode == 32);
+    };
     return display.removeChild(display.lastChild);
   }
 
